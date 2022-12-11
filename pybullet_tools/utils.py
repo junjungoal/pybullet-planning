@@ -3599,6 +3599,9 @@ def pairwise_collision(body1, body2, **kwargs):
         body1, links1 = expand_links(body1)
         body2, links2 = expand_links(body2)
         return any_link_pair_collision(body1, links1, body2, links2, **kwargs)
+    print('body1: ', get_body_name(body1))
+    print('body2: ', get_body_name(body2))
+    print('Collision: ', body_collision(body1, body2))
     return body_collision(body1, body2, **kwargs)
 
 def pairwise_collisions(body, obstacles, link=None, **kwargs):
